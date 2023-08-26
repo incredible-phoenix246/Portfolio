@@ -143,14 +143,14 @@
 
 
 
-/*about section styling*/
-.about {
+/* all related styles */
+.about, .services {
     padding: 100px 0;
     font-family:  'Poppins', sans-serif;
     background-color: #f7f9f5;
 }
 
-.title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -160,19 +160,18 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-.title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    background: #3a3d4e;
     transform: translateX(-50%);
 }
 
-.title::after{
-    content: "Who am I";
+section .title::after{
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -184,12 +183,19 @@
 
 }
 
-.about-content{
+.about-content, .services-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+
+
+/*about section styling*/
+.about .title::after{
+    content: "Who am I";
+}
+
 
 .left {
     width: 40%;
@@ -213,7 +219,7 @@
     font-weight: 600;
     margin-bottom: 10px;
     line-height: 30px;
-    color: #111;
+    color: #3a3d4e;
 
 }
 
@@ -245,6 +251,63 @@
     color: #e46d5f;
 }
 
+
+/*services section styling*/
+.services{
+    color: #f7f9f5;
+    background: #3a3d4e;
+}
+
+.services .title::after{
+    background: #3a3d4e;
+    content: "What i Do";    
+}
+
+.card {
+    width: calc(50% - 30px);
+    background: #ece5d9;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box{
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card:hover{
+    background: #e46d5f;
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s ease;
+}
+
+.card:hover p{
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    color: #f7f9f5;
+}
+
+
+
+
+
+
+.card i{
+    color: #3a3d4e;
+    font-size: 50px;
+}
+
+.card p {
+    color: #e46d5f;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
 
 
 
@@ -286,7 +349,7 @@
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;  
+        background: #3a3d4e;  
         text-align: center;  
         padding-top: 80px; 
         transition: all 0.2s ease ;   
@@ -337,6 +400,22 @@
     .right{
         flex: 100%;  
         text-align: center;      
+    }
+
+    /* services section styling */
+    .services-content{
+        display: block;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .card{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
 }
